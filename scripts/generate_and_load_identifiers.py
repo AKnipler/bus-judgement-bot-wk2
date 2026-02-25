@@ -7,6 +7,7 @@ import logging
 from dotenv import load_dotenv
 import hashlib
 import uuid
+import csv
 
 # Setup logging
 logging.basicConfig(
@@ -104,7 +105,22 @@ if __name__ == "__main__":
 
     # Get CSV path
     csv_path = input("Enter path to CSV file containing student information: ").strip()
-    if not os.path.exists(csv_path):
+    if not csv_path:
+        num_identifiers = input("This process will generate a CSV to make identifiers. How many identifiers would you like? (Leave blank to cancel) ").strip()
+        if int(num_identifiers):
+            data = [["ID"]] + [[i] for i in range(int(num_identifiers))]
+
+            csv_path = 'random_IDs.csv'
+
+            # Open the file in write mode ('w') with newline=''
+            with open(csv_path, mode='w', newline='') as file:
+                writer = csv.writer(file)
+                # Write all rows at once
+                writer.writerows(data)
+
+        else: 
+            exit()
+    elif not os.path.exists(csv_path):
         raise FileNotFoundError(f"CSV file not found: {csv_path}")
 
     process_and_load_identifiers(csv_path, connection_string)

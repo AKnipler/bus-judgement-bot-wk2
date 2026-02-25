@@ -74,7 +74,7 @@ You'll need:
    - They can then:
      1. Chat with their AI mentor
 
-### 3. Viewing Results
+### 4. Viewing Results
 
 - All conversations are automatically saved in your MongoDB database
 - Each conversation is linked to the student's identifier
