@@ -44,10 +44,8 @@ if not st.session_state.chat_history:
         response = chat_engine.chat(initial_prompt)
 
         message = {"content": str(response), "role": "assistant"}
-        # st.session_state.response_counter += 1
         st.session_state.chat_history.append(message)
         st.markdown(message["content"])
-        print(st.session_state.chat_history)
 
 
 else:
