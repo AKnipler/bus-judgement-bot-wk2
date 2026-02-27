@@ -20,7 +20,7 @@ def check_identifier(connection_string, identifier):
 def log_transcript(connection_string, conversation_type, messages):
     client = get_mongo_client(connection_string)
     db = client.embot
-    collection = db.transcripts
+    collection = db.transcriptsWk2
 
     try:
         # Create new document for previous conversation
