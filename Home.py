@@ -51,7 +51,7 @@ def init_page():
     )
     st.markdown(
         "## Instructions\n"
-        "1. Enter your unique identifier below. This will be used to associate your conversation records with you.\n"
+        "1. Enter your unique identifier below (the same one that you used last week). This will be used to associate your conversation records with you.\n"
         "2. In the Em Conversation tab, converse with Em (top left corner of the screen). Only when you are finished the conversation click the `finish` button. You will not be able to undo this submission.\n"
         "\nNote: Please ensure you have a stable internet connection to prevent any issues from occurring."
     )
