@@ -44,10 +44,10 @@ def setup():
 
 def init_page():
     setup()
-    st.title("Homepage")
+    st.title("Homepage (Week 2)")
     st.markdown(
         "Welcome! For this activity, you will interact with a chatbot roleplaying as Em, a middle manager in a mid-sized firm who often investigates issues for the CEO and helps shape executive judgement. " \
-        "The aim is to practise making and justifying business judgements using techniques from the Cracked It textbook and subject materials." \
+        "The aim is to practise making and justifying business judgements using techniques from the Cracked It textbook (Chapters 1,2 and 3) and subject materials." \
     )
     st.markdown(
         "## Instructions\n"
